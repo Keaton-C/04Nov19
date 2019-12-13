@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:registerEvent name="toastEvent" type="c:Profile_Event" />
+    <!--Call the JavaScript function, which stands ready to fire the event off-->
+    <br/>
+    <br/>
+    <lightning:button label="Make A Toast" variant="success" onClick="{!c.FireProfileEvent}" />
+</aura:component>
