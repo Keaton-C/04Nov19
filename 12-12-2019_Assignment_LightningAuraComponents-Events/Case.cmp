@@ -1,0 +1,22 @@
+<aura:component controller="Case_Controller">
+    <!--<aura:attribute name="Case" type="String" default="Cases" />-->
+    <aura:attribute name="cases" type="Case[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="display" type="Boolean" default="true" />
+    
+    <div class="slds-box">
+        <div class="slds-text-heading_large">The Open Cases</div>
+        <br/>
+        <lightning:accordion aura:id="accordion">
+        	<aura:iteration items="{!v.cases}" var="case">
+                <lightning:accordionSection label="{!case.Subject}">
+                    <c:ViewCase caseID="{!case.Id}"/>
+                    <!--Test Display of Cases from Subject Field by inserting test data into Case Object, in Org-->
+                </lightning:accordionSection>
+            </aura:iteration>
+        </lightning:accordion>
+    </div>
+    
+    {!v.Case}
+    <br/>
+</aura:component>

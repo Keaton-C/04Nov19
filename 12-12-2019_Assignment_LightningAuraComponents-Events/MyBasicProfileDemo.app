@@ -7,7 +7,7 @@
     <div class="slds-col slds-size_2-of-12"></div>
     <div class="slds-col slds-size_2-of-12"><c:Hobbies /></div>
     <div class="slds-col slds-size_1-of-3"></div>
-
+    
     <div class="slds-col slds-size_2-of-12"><c:Edu_Certs /></div>
     <div class="slds-col slds-size_1-of-3"><c:Case /></div>
     <!--Need this part to harness EventHandler and EventNotifier-->
@@ -15,5 +15,9 @@
         <br/>
         <br/>
         <c:Profile_EventNotifier />
+    <!--Need Form, Here-->
+        <div class="slds-float_right">
+            <c:FormComponent />
+        </div>
     </div>
 </aura:application>

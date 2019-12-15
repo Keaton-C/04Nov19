@@ -1,0 +1,16 @@
+<aura:component controller="Case_Controller">
+<!--<aura:component>-->
+    <aura:attribute name="hobbycases" type="Id[]" />
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+    <div class="slds-box">
+    	<div class="slds-text-heading_large">My Open Hobby Cases</div>
+        <br/>
+        <lightning:accordion aura:id="accordion">
+        	<aura:iteration items="{!v.hobbycases}" var="case">
+            	<lightning:accordionSection>
+                    <c:Case caseID="{!case}"/>
+                </lightning:accordionSection>
+            </aura:iteration>
+        </lightning:accordion>
+    </div>
+</aura:component>

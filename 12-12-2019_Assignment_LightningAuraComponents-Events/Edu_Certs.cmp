@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="Education" type="String" default="Education and Certifications" />
+    <aura:attribute name="display" type="Boolean" default="false" />
+    <aura:if isTrue="{!v.display}">
+    {!v.Education}
+    <br/>
+        <img src="https://ih1.redbubble.net/image.990056968.6318/st%2Csmall%2C420x460-pad%2C420x460%2Cf8f8f8.u1.jpg"/>
+    <p>Bachelor of Science, Computer Science</p>
+    <p>CSUSB</p>
+    <br/>
+    <p>iCare, EPIC Healthcare Software Certification</p>
+    </aura:if>
+    <br/>
+    <lightning:button label="EDUCATION and CERTIFICATIONS" title="Education and Certifications" onclick="{!c.show}" />
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component >
+	<aura:attribute name="caseID" type="ID" />
+     <h2>Case ID:</h2>
+    <force:recordView recordId="{!v.caseID}" type="MINI" />
+</aura:component>

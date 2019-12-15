@@ -1,17 +1,11 @@
 ({
-	FireProfileEvent : function(component, event, helper) {
-        // This gets the event, essentially instantiating it.
-        /*let appEvent= $A.get("e.c:Profile_Event");
-        // We provide the parameter used in the event.
-        appEvent.setParams({"HaveAToast":"App Event Fired"});*/
-        //Need toast code:
-        var toastEvent = $A.get("e.c:Profile_Event");
-    	toastEvent.setParams({
-        	"title": "Success!",
-        	"message": "The record has been updated successfully."
-    	});
-        // We fire the event.
-        toastEvent.fire();
-        appEvent.fire();
+	HandleAppEvent : function(component, event, helper) {
+        // We get the parameter storing information from the event.
+        // Not all events may have parameters, we might just want to do something 
+        // when something else happens.
+		let message = event.getParam("message");
+        // We store the value from the event inside the attribute of Bob.
+        component.set("v.toastEvent", message);
+        event.set("v.toastEvent", message);
 	}
 })

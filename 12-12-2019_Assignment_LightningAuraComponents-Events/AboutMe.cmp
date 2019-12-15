@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable" >
+	<aura:attribute name="AboutMe" type="String" default="About Me" />
+    {!v.AboutMe}
+    <br/>
+    <img src="https://www.extremetech.com/wp-content/uploads/2016/11/Mars-from-Hubble.jpg" />
+    <br/>
+    <p>Name: Keaton Boardman</p>
+    <p>Sex: Male</p>
+    <p>Training, with Revature corporation, to become a Salesforce Consultant.</p>
+    <p>My dream is to leverage enough capital to engineer and mass produce</p>
+    <p>open-source, mobile biodomes that run on renewable energy.</p>
+    <br/>
+    <br/>
+</aura:component>

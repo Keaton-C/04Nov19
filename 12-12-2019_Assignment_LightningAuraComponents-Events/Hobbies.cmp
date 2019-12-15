@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable">
+	<aura:attribute name="Hobbies" type="String" default="Hobbies" />
+    <aura:attribute name="display" type="Boolean" default="false" />
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>-->
+    <!--<aura:handler name="getMy" value="{!this}" action="{!c.getMyOpenCases}"></aura:handler>-->
+    <aura:if isTrue="{!v.display}">
+    
+    {!v.Hobbies}
+    <br/>
+        <img src="https://vignette.wikia.nocookie.net/elite-dangerous/images/4/46/Biodome-Elite-Dangerous.png/revision/latest/scale-to-width-down/300?cb=20171219024324" />
+    <p>BRAMEEN:</p>
+    <p>Biotechnological Regenerative Automated Mobile Enclosed Ecosystem Networks</p>
+    <a href="https://www.crcpress.com/Man-Made-Closed-Ecological-Systems/Gitelson-Lisovsky/p/book/9780415299985">Book: "Man Made Closed Ecological Life Support Systems"</a>
+    <br/>
+    </aura:if>
+    <br/>
+    <lightning:button label="HOBBIES" title="Hobbies" onclick="{!c.show}" />
+</aura:component>
